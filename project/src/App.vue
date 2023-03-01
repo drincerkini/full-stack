@@ -1,18 +1,20 @@
 <template>
   <nav>
-    <router-link to="/categories">Categories</router-link>
-    <router-link to="/createcategories">Create Categories</router-link>
+    <ul>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/about">About</router-link></li>
+      <li><router-link to="/categories">Categories</router-link></li>
+      <li><router-link to="/createcategories">Create Categories</router-link></li>
+    </ul>
   </nav>
   <RouterView></RouterView>
-  <HomeView />
 </template>
 
 <script>
-import HomeView from './views/HomeView.vue';
 
 export default {
   components: {
-    HomeView
+    
   }
 }
 </script>
@@ -25,5 +27,25 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  color: #2c3e50;
+  text-decoration: none;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+li{
+  margin-right: 45px;
+  text-decoration: none;
+  color: #2c3e50;
 }
 </style>
