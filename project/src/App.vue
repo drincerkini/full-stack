@@ -1,12 +1,15 @@
 <template>
   <nav>
     <ul>
-      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/">Create Student</router-link></li>
       <li><router-link to="/about">About</router-link></li>
       <li><router-link to="/categories">Categories</router-link></li>
       <li><router-link to="/createcategories">Create Categories</router-link></li>
       <li><router-link to="/register">Register</router-link></li>
       <li><router-link to="/login">Login</router-link></li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="/view">View Students</router-link>
+      </li>
     </ul>
   </nav>
   <RouterView></RouterView>
@@ -14,11 +17,6 @@
 
 <script>
 
-export default {
-  components: {
-    
-  }
-}
 </script>
 
 <style>

@@ -6,7 +6,7 @@ import categoryRouter from './routes/categoryRouter';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-
+const studentAPI = require('./routes/studentRouter')
 
 
 
@@ -27,9 +27,7 @@ mongoose.connect(`${MONGO_CONECTION_URI}:${MONGO_PORT}/${MONGO_DB_NAME}`).then((
             res.json({succes : true})
         });
 
-        app.get('/api', (req, res) => {
-            res.json({succes : true})
-        });
+        app.use('/api', studentAPI)
 
         app.use('/categories', categoryRouter)
         
